@@ -104,32 +104,37 @@ main() {
             ),
           ),
           child: Center(
-            child: Text(
-              'Hello Ahmed',
-              style: TextStyle(
-                fontSize: 50,
-                color: Colors.white,
-                height: -10,
-                shadows: [
-                  Shadow(
-                    color: Colors.black38,
-                    blurRadius: 8,
-                    offset: Offset(5, 5),
-                  ),
-                ],
-                decoration: TextDecoration.combine([TextDecoration.underline,TextDecoration.overline,TextDecoration.lineThrough]),
-                decorationColor: Colors.green,
-                decorationStyle: TextDecorationStyle.dashed,
-                decorationThickness: 1.2,
-                fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.w800,
-                letterSpacing: 4,
-                wordSpacing: 2,
-              ),
-            ),
+            child: myCustomText('Hello world'),
           ),
+
         ),
       ),
     ),
   );
 }
+Widget myCustomText(String msg){
+  return Text(
+    msg,
+    style: TextStyle(
+      fontSize: 50,
+      color: Colors.white,
+      height: -10,
+      shadows: [
+        Shadow(
+          color: Colors.black38,
+          blurRadius: 8,
+          offset: Offset(5, 5),
+        ),
+      ],
+      decoration: TextDecoration.combine([TextDecoration.underline,TextDecoration.overline,TextDecoration.lineThrough]),
+      decorationColor: Colors.green,
+      decorationStyle: TextDecorationStyle.dashed,
+      decorationThickness: 1.2,
+      fontStyle: FontStyle.italic,
+      fontWeight: FontWeight.w800,
+      letterSpacing: 4,
+      wordSpacing: 2,
+    ),
+  );
+}
+
